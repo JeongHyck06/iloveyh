@@ -13,10 +13,5 @@ public class ClassStart1 {
         int student2Grade = 90;
         System.out.println("이름: " + student1Name + "나이: " + student1Age + "성적: " + student1Grade);
 
-        String student3Name = "학생3";
-        int student3Age = 18;
-        int student3Grade = 90;
-        System.out.println("이름: " + student1Name + "나이: " + student1Age + "성적: " + student1Grade);
-
     }
 }
