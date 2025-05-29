@@ -6,9 +6,13 @@ import hello.hello_spring.repository.MemoryMemberRepository;
 import java.util.List;
 import java.util.Optional;
 
-public class memberService {
+public class MemberService {
 
-    private final MemoryMemberRepository memberRepository = new MemoryMemberRepository();
+    private final MemoryMemberRepository memberRepository;
+
+    public MemberService(MemoryMemberRepository memberRepository) {
+        this.memberRepository = memberRepository;
+    }
 
 
     /*
@@ -24,7 +28,7 @@ public class memberService {
     private void validateDuplicateMember(Member member) {
         memberRepository.findByName(member.getName())
                 .ifPresent(m -> {
-            throw new IllegalStateException("이미 존재하 회원 입니다");
+            throw new IllegalStateException("이미 존재하는 회원 입니다");
         });
     }
     /*
